@@ -1,25 +1,5 @@
 <?php
 require_once 'config.php';
-///* CAPITAINE *////
-
-// Fonction pour récupérer tous les livres de la base de données
-function getAllBooks() {
-    global $conn;
-
-    $sql = "SELECT * FROM books";
-    $result = mysqli_query($conn, $sql);
-
-    $books = array();
-
-    while ($row = mysqli_fetch_assoc($result)) {
-        $books[] = $row;
-    }
-
-    return $books;
-}
-
-
-//**END CAPITAINE */
 
 // Fonction pour vérifier les informations de connexion de l'utilisateur
 function checkLogin($username, $password) {

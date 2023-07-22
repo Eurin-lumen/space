@@ -1,25 +1,5 @@
 <?php
 require_once 'config.php';
-///* CAPITAINE *////
-
-// Fonction pour récupérer tous les livres de la base de données
-function getAllBooks() {
-    global $conn;
-
-    $sql = "SELECT * FROM books";
-    $result = mysqli_query($conn, $sql);
-
-    $books = array();
-
-    while ($row = mysqli_fetch_assoc($result)) {
-        $books[] = $row;
-    }
-
-    return $books;
-}
-
-
-//**END CAPITAINE */
 
 // Fonction pour vérifier les informations de connexion de l'utilisateur
 function checkLogin($username, $password) {
@@ -108,6 +88,28 @@ function getUserByUsername($username) {
     return ['id' => $id, 'username' => $username];
 }
 
+
+// Fonction pour récupérer les informations d'un utilisateur par son ID
+function getUserById($user_id) {
+    global $conn;
+    
+    $sql = "SELECT * FROM users WHERE id = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    
+    if (!$stmt) {
+        return false;
+    }
+    
+    mysqli_stmt_bind_param($stmt, "i", $user_id);
+    
+    if (mysqli_stmt_execute($stmt)) {
+        $result = mysqli_stmt_get_result($stmt);
+        $user = mysqli_fetch_assoc($result);
+        return $user;
+    } else {
+        return false;
+    }
+}
 
 // Fonction pour récupérer les livres empruntés par un utilisateur par son ID
 function getBorrowedBooksByUserId($user_id) {
