@@ -16,7 +16,7 @@ if (isset($_POST['search'])) {
 <head>
     <title>Recherche de livres</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="user/user_style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="user/user_style.css"> -->
 
 </head>
 <body>

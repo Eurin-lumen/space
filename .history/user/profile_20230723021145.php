@@ -19,7 +19,7 @@ $borrowedBooks = getBorrowedBooksByUserId($user_id);
 <head>
     <title>Mon Profil</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="user_style.css">
+    <link rel="stylesheet" type="text/css" href="user/user_style.css">
 </head>
 <body>
     <header>
