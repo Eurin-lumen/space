@@ -547,32 +547,3 @@ function deleteBook($book_id) {
         return false; // Une erreur s'est produite lors de la suppression du livre
     }
 }
-
-
-
-// includes/functions.php
-
-function getBorrowedBooks() {
-    global $conn;
-
-    // Requête SQL pour récupérer les livres empruntés avec les informations sur l'utilisateur
-    $sql = "SELECT books.id, books.title, books.author, users.username, borrowed_books.borrow_date, borrowed_books.is_returned
-            FROM borrowed_books
-            INNER JOIN books ON borrowed_books.book_id = books.id
-            INNER JOIN users ON borrowed_books.user_id = users.id
-            ORDER BY borrowed_books.borrow_date DESC";
-
-    $result = mysqli_query($conn, $sql);
-
-    if (!$result) {
-        return false; // Une erreur s'est produite lors de l'exécution de la requête
-    }
-
-    $borrowed_books = array();
-
-    while ($row = mysqli_fetch_assoc($result)) {
-        $borrowed_books[] = $row;
-    }
-
-    return $borrowed_books;
-}

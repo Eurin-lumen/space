@@ -12,8 +12,8 @@
         <h2>Livres Empruntés</h2>
         <?php
         // Inclure le fichier de configuration et les fonctions
-        require_once '../includes/config.php';
-        require_once '../includes/functions.php';
+        require_once 'includes/config.php';
+        require_once 'includes/functions.php';
 
         // Récupérer la liste des livres empruntés depuis la base de données
         $borrowed_books = getBorrowedBooks();

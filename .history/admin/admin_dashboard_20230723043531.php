@@ -35,7 +35,6 @@ $books = getAllBooks();
             <table>
                 <tr>
                     <th>ID</th>
-                    <th>Image</th>
                     <th>Titre</th>
                     <th>Auteur</th>
                     <th>Domaine</th>
@@ -46,7 +45,6 @@ $books = getAllBooks();
                 <?php foreach ($books as $book) : ?>
                     <tr>
                         <td><?php echo $book['id']; ?></td>
-                        <td><img src="<?php echo $book['image_filename']; ?>" alt="Image du livre"></td>
                         <td><?php echo $book['title']; ?></td>
                         <td><?php echo $book['author']; ?></td>
                         <td><?php echo $book['domain']; ?></td>
@@ -54,7 +52,8 @@ $books = getAllBooks();
                         <td><?php echo $book['copies']; ?></td>
                         
                         <td>
-                            
+                        <img src="<?php echo $book['image_filename']; ?>" alt="Image du livre">
+
                             <a href="edit_book.php?id=<?php echo $book['id']; ?>">Modifier</a>
                             <a href="delete_book.php?id=<?php echo $book['id']; ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce livre ?')">Supprimer</a>
                             <a href="view_book.php?id=<?php echo $book['id']; ?>">Consulter</a>

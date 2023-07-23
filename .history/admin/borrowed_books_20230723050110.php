@@ -6,14 +6,14 @@
     <link rel="stylesheet" type="text/css" href="admin_style.css">
 </head>
 <body>
-    <?php include 'admin_nav.php'; ?>
+    <?php include 'admin/admin_nav.php'; ?>
 
     <div class="borrowed-books">
         <h2>Livres Empruntés</h2>
         <?php
         // Inclure le fichier de configuration et les fonctions
-        require_once '../includes/config.php';
-        require_once '../includes/functions.php';
+        require_once 'includes/config.php';
+        require_once 'includes/functions.php';
 
         // Récupérer la liste des livres empruntés depuis la base de données
         $borrowed_books = getBorrowedBooks();
