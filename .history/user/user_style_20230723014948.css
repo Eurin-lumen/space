@@ -119,50 +119,6 @@ form {
     margin-bottom: 20px;
   }
   
-  /* Style pour le conteneur d'inscription */
-.register-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .register-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .register-container label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .register-container input[type="text"],
-  .register-container input[type="password"],
-  .register-container select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 15px;
-  }
-  
-  .register-container button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .register-container button:hover {
-    background-color: #555;
-  }
-  
   /* Styles spécifiques pour dashboard.php */
   .dashboard-container {
     display: flex;

@@ -21,7 +21,7 @@ $borrowedBooks = getBorrowedBooksByUserId($_SESSION['user_id']);
 <html>
 <head>
     <title>Tableau de Bord Utilisateur</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="user_style.css">
 </head>
 <body>
