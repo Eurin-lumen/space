@@ -73,19 +73,18 @@ if (isset($_POST['submit'])) {
                 <input type="text" name="author" required>
                 
                 <label for="domain">Domaine :</label>
-                <select id="domain" name="domain" required>
-                    <option value="Littérature" <?php if ($book['domain'] === 'Littérature') echo 'selected'; ?>>Littérature</option>
-                    <option value="Science-fiction" <?php if ($book['domain'] === 'Science-fiction') echo 'selected'; ?>>Science-fiction</option>
-                    <option value="Policier" <?php if ($book['domain'] === 'Policier') echo 'selected'; ?>>Policier</option>
-                    <option value="Fantastique" <?php if ($book['domain'] === 'Fantastique') echo 'selected'; ?>>Fantastique</option>
-                    <option value="Biographie" <?php if ($book['domain'] === 'Biographie') echo 'selected'; ?>>Biographie</option>
-                    <option value="Histoire" <?php if ($book['domain'] === 'Histoire') echo 'selected'; ?>>Histoire</option>
-                    <option value="Science" <?php if ($book['domain'] === 'Science') echo 'selected'; ?>>Science</option>
-                    <option value="Informatique" <?php if ($book['domain'] === 'Informatique') echo 'selected'; ?>>Informatique</option>
-                    <option value="Romance" <?php if ($book['domain'] === 'Romance') echo 'selected'; ?>>Romance</option>
-                    <option value="Cuisine" <?php if ($book['domain'] === 'Cuisine') echo 'selected'; ?>>Cuisine</option>
+                <select id="domain" name="domain">
+                    <option value="Littérature">Littérature</option>
+                    <option value="Science-fiction">Science-fiction</option>
+                    <option value="Policier">Policier</option>
+                    <option value="Fantastique">Fantastique</option>
+                    <option value="Biographie">Biographie</option>
+                    <option value="Histoire">Histoire</option>
+                    <option value="Science">Science</option>
+                    <option value="Informatique">Informatique</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Cuisine">Cuisine</option>
                 </select>
-
 
                 <label for="description">Description :</label>
                 <textarea name="description" required></textarea>

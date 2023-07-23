@@ -345,26 +345,3 @@ function getAdminById($admin_id) {
 
     return ['id' => $id, 'username' => $username];
 }
-
-function getAdminByUsername($username) {
-    global $conn;
-    $sql = "SELECT id, username, password FROM admins WHERE username = ?";
-    $stmt = mysqli_prepare($conn, $sql);
-
-    if (!$stmt) {
-        return null;
-    }
-
-    mysqli_stmt_bind_param($stmt, "s", $username);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_bind_result($stmt, $id, $username, $hashedPassword);
-    mysqli_stmt_fetch($stmt);
-    mysqli_stmt_close($stmt);
-
-    if (!$id) {
-        return null;
-    }
-
-    return ['id' => $id, 'username' => $username, 'password' => $hashedPassword];
-}
-

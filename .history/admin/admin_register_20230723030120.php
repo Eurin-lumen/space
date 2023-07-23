@@ -2,17 +2,17 @@
 <html>
 <head>
     <title>Inscription Administrateur</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="admin/admin_style.css">
 </head>
 <body>
-    <?php include 'admin_nav.php'; ?>
+    <?php include 'admin/admin_nav.php'; ?>
 
     <div class="register-form">
         <h2>Inscription Administrateur</h2>
         <?php
         // Inclure le fichier de fonctions
-        require_once '../includes/functions.php';
+        require_once 'includes/functions.php';
 
         // Vérifier si le formulaire d'inscription a été soumis
         if ($_SERVER["REQUEST_METHOD"] == "POST") {

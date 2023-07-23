@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Inscription Administrateur</title>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="admin_style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="admin/admin_style.css">
 </head>
 <body>
     <?php include 'admin_nav.php'; ?>
