@@ -57,20 +57,6 @@ $books = getAllBooks();
             <img src="images/informatique.jpg" alt="Informatique">
             <h3>Informatique</h3>
         </div>
-
-        <div class="category-card">
-            <img src="images/litterature.jpg" alt="Littérature">
-            <h3>Littérature</h3>
-        </div>
-        <div class="category-card">
-            <img src="images/informatique.jpg" alt="Informatique">
-            <h3>Informatique</h3>
-        </div>
-
-        <div class="category-card">
-            <img src="images/informatique.jpg" alt="Informatique">
-            <h3>Informatique</h3>
-        </div>
     </section>
     <main>
         <div class="book-list">

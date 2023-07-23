@@ -1,0 +1,78 @@
+/* Style pour l'en-tête (Header) */
+header {
+    background-color: #f9f9f9;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: #ffcc00;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Style pour rendre l'en-tête dynamique (ajuster selon la taille de l'écran) */
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background-color: #f9f9f9;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+
+    nav.show {
+        display: block;
+    }
+
+    /* Afficher le menu de navigation en version mobile */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .menu-icon.active {
+        display: none;
+    }
+
+    .menu-icon.active + nav {
+        display: block;
+    }
+}

@@ -29,49 +29,6 @@ $books = getAllBooks();
         <img src="images/bib.jpg" alt="Bannière de promotion">
         <a href="user/view_book.php?id=<?php echo $featured_book['id']; ?>" class="view-more-button">Voir plus</a>
     </section>
-
-    <section class="categories-section">
-        <div class="category-card">
-            <img src="images/litterature.jpg" alt="Littérature">
-            <h3>Littérature</h3>
-        </div>
-        <div class="category-card">
-            <img src="images/informatique.jpg" alt="Informatique">
-            <h3>Informatique</h3>
-        </div>
-        <!-- Ajoutez les autres catégories ici -->
-        <div class="category-card">
-            <img src="images/litterature.jpg" alt="Littérature">
-            <h3>Littérature</h3>
-        </div>
-        <div class="category-card">
-            <img src="images/informatique.jpg" alt="Informatique">
-            <h3>Informatique</h3>
-        </div>
-
-        <div class="category-card">
-            <img src="images/litterature.jpg" alt="Littérature">
-            <h3>Littérature</h3>
-        </div>
-        <div class="category-card">
-            <img src="images/informatique.jpg" alt="Informatique">
-            <h3>Informatique</h3>
-        </div>
-
-        <div class="category-card">
-            <img src="images/litterature.jpg" alt="Littérature">
-            <h3>Littérature</h3>
-        </div>
-        <div class="category-card">
-            <img src="images/informatique.jpg" alt="Informatique">
-            <h3>Informatique</h3>
-        </div>
-
-        <div class="category-card">
-            <img src="images/informatique.jpg" alt="Informatique">
-            <h3>Informatique</h3>
-        </div>
-    </section>
     <main>
         <div class="book-list">
             <?php foreach ($books as $book) : ?>

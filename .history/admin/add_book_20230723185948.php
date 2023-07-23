@@ -95,11 +95,21 @@ if (isset($_POST['submit'])) {
                 <label for="copies">Exemplaires disponibles :</label>
                 <input type="number" name="copies" required>
 
-                <label for="image">Image : </label>
-                <input type="file" name="image" id="">
+             <!-- Pour le bouton d'image -->
+                <label for="image">Image :</label>
+                <div class="file-upload">
+                    <input type="file" name="image" id="image">
+                    <button class="upload-button" type="button">Choisir une image</button>
+                    <span class="file-name"></span>
+                </div>
 
-                <label for="pdf">pdf : </label>
-                <input type="file" name="pdf" id="">
+                <!-- Pour le bouton de PDF -->
+                <label for="pdf">Fichier PDF :</label>
+                <div class="file-upload">
+                    <input type="file" name="pdf" id="pdf">
+                    <button class="upload-button" type="button">Choisir un fichier PDF</button>
+                    <span class="file-name"></span>
+                </div>
 
 
 
