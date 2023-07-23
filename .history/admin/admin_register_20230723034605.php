@@ -19,21 +19,21 @@
             // Récupérer les données du formulaire
             $username = $_POST["username"];
             $password = $_POST["password"];
-            $confirm_password = $_POST["confirm_password"];
 
-            // Inscrire le nouvel administrateur
-            $result = registerAdmin($username, $password, $confirm_password);
+            // Vérifier si l'administrateur existe déjà
+            $existingAdmin = getAdminByUsername($username);
 
-            if ($result === true) {
-                // Rediriger vers la page de connexion après une inscription réussie
-                header("Location: admin_login.php");
-                exit();
-            } elseif ($result === false) {
-                echo '<p class="error-message">Une erreur s\'est produite lors de l\'inscription. Veuillez réessayer.</p>';
-            } elseif ($result === "existing_admin") {
+            if ($existingAdmin) {
                 echo '<p class="error-message">Un administrateur avec ce nom d\'utilisateur existe déjà.</p>';
-            } elseif ($result === "password_mismatch") {
-                echo '<p class="error-message">Les mots de passe ne correspondent pas.</p>';
+            } else {
+                // Inscrire le nouvel administrateur
+                if (registerAdmin($username, $password)) {
+                    // Rediriger vers la page de connexion
+                    header("Location: admin_login.php");
+                    exit();
+                } else {
+                    echo '<p class="error-message">Une erreur s\'est produite lors de l\'inscription. Veuillez réessayer.</p>';
+                }
             }
         }
         ?>

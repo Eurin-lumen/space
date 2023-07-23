@@ -48,6 +48,7 @@ if (isset($_POST['submit'])) {
     }
 }
 
+$book = getBookById($book_id);
 ?>
 
 <!DOCTYPE html>
@@ -75,18 +76,17 @@ if (isset($_POST['submit'])) {
                 
                 <label for="domain">Domaine :</label>
                 <select id="domain" name="domain" required>
-                    <option value="Littérature" <?php if (isset($book) && $book['domain'] === 'Littérature') echo 'selected'; ?>>Littérature</option>
-                    <option value="Science-fiction" <?php if (isset($book) && $book['domain'] === 'Science-fiction') echo 'selected'; ?>>Science-fiction</option>
-                    <option value="Policier" <?php if (isset($book) && $book['domain'] === 'Policier') echo 'selected'; ?>>Policier</option>
-                    <option value="Fantastique" <?php if (isset($book) && $book['domain'] === 'Fantastique') echo 'selected'; ?>>Fantastique</option>
-                    <option value="Biographie" <?php if (isset($book) && $book['domain'] === 'Biographie') echo 'selected'; ?>>Biographie</option>
-                    <option value="Histoire" <?php if (isset($book) && $book['domain'] === 'Histoire') echo 'selected'; ?>>Histoire</option>
-                    <option value="Science" <?php if (isset($book) && $book['domain'] === 'Science') echo 'selected'; ?>>Science</option>
-                    <option value="Informatique" <?php if (isset($book) && $book['domain'] === 'Informatique') echo 'selected'; ?>>Informatique</option>
-                    <option value="Romance" <?php if (isset($book) && $book['domain'] === 'Romance') echo 'selected'; ?>>Romance</option>
-                    <option value="Cuisine" <?php if (isset($book) && $book['domain'] === 'Cuisine') echo 'selected'; ?>>Cuisine</option>
+                    <option value="Littérature" <?php if ($book['domain'] === 'Littérature') echo 'selected'; ?>>Littérature</option>
+                    <option value="Science-fiction" <?php if ($book['domain'] === 'Science-fiction') echo 'selected'; ?>>Science-fiction</option>
+                    <option value="Policier" <?php if ($book['domain'] === 'Policier') echo 'selected'; ?>>Policier</option>
+                    <option value="Fantastique" <?php if ($book['domain'] === 'Fantastique') echo 'selected'; ?>>Fantastique</option>
+                    <option value="Biographie" <?php if ($book['domain'] === 'Biographie') echo 'selected'; ?>>Biographie</option>
+                    <option value="Histoire" <?php if ($book['domain'] === 'Histoire') echo 'selected'; ?>>Histoire</option>
+                    <option value="Science" <?php if ($book['domain'] === 'Science') echo 'selected'; ?>>Science</option>
+                    <option value="Informatique" <?php if ($book['domain'] === 'Informatique') echo 'selected'; ?>>Informatique</option>
+                    <option value="Romance" <?php if ($book['domain'] === 'Romance') echo 'selected'; ?>>Romance</option>
+                    <option value="Cuisine" <?php if ($book['domain'] === 'Cuisine') echo 'selected'; ?>>Cuisine</option>
                 </select>
-
 
 
                 <label for="description">Description :</label>

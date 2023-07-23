@@ -369,17 +369,11 @@ function getAdminByUsername($username) {
 }
 
 // Fonction pour enregistrer un nouvel administrateur
-
-function registerAdmin($username, $password, $confirm_password) {
+function registerAdmin($username, $password) {
     global $conn;
 
-    // Vérifier si les mots de passe correspondent
-    if ($password !== $confirm_password) {
-        return false; // Les mots de passe ne correspondent pas
-    }
-
     // Vérifier si l'administrateur existe déjà dans la base de données
-    $query = "SELECT id FROM admins WHERE username = ?";
+    $query = "SELECT id FROM users WHERE username = ?";
     $stmt = mysqli_prepare($conn, $query);
 
     if (!$stmt) {
@@ -398,7 +392,7 @@ function registerAdmin($username, $password, $confirm_password) {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insérer le nouvel administrateur dans la base de données
-    $query = "INSERT INTO admins (username, password) VALUES (?, ?)";
+    $query = "INSERT INTO users (username, password, role) VALUES (?, ?, 'admin')";
     $stmt = mysqli_prepare($conn, $query);
 
     if (!$stmt) {
@@ -413,53 +407,4 @@ function registerAdmin($username, $password, $confirm_password) {
         return false; // Une erreur s'est produite lors de l'enregistrement de l'administrateur
     }
 }
-
-// Fonction pour vérifier si l'administrateur est connecté
-function isAdminLoggedIn() {
-    return isset($_SESSION['admin_id']);
-}
-
-// Fonction pour gérer la connexion de l'administrateur
-function adminLogin($username, $password) {
-    global $conn;
-
-    // Vérifier si l'administrateur existe dans la base de données
-    $admin = getAdminByUsername($username);
-
-    if (!$admin) {
-        return false; // L'administrateur n'existe pas
-    }
-
-    // Vérifier le mot de passe
-    if (password_verify($password, $admin['password'])) {
-        // Le mot de passe est correct, enregistrer l'ID de l'administrateur dans la session
-        $_SESSION['admin_id'] = $admin['id'];
-        return true; // Connexion réussie
-    } else {
-        return false; // Mot de passe incorrect
-    }
-}
-
-
-/** fUNCTION OF ADDBOOK */
-function addBook($title, $author, $domain, $description, $copies, $image, $pdf) {
-    global $conn;
-
-    // Préparer la requête SQL pour insérer le nouveau livre
-    $sql = "INSERT INTO books (title, author, domain, description, copies, image, pdf) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($conn, $sql);
-
-    // Vérifier si la préparation de la requête a réussi
-    if (!$stmt) {
-        return false; // Une erreur s'est produite lors de la préparation de la requête
-    }
-
-    mysqli_stmt_bind_param($stmt, "ssssiss", $title, $author, $domain, $description, $copies, $image, $pdf);
-
-    // Exécuter la requête
-    if (mysqli_stmt_execute($stmt)) {
-        return true; // Le livre a été ajouté avec succès
-    } else {
-        return false; // Une erreur s'est produite lors de l'ajout du livre
-    }
-}
+?>

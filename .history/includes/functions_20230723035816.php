@@ -439,27 +439,3 @@ function adminLogin($username, $password) {
         return false; // Mot de passe incorrect
     }
 }
-
-
-/** fUNCTION OF ADDBOOK */
-function addBook($title, $author, $domain, $description, $copies, $image, $pdf) {
-    global $conn;
-
-    // Préparer la requête SQL pour insérer le nouveau livre
-    $sql = "INSERT INTO books (title, author, domain, description, copies, image, pdf) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($conn, $sql);
-
-    // Vérifier si la préparation de la requête a réussi
-    if (!$stmt) {
-        return false; // Une erreur s'est produite lors de la préparation de la requête
-    }
-
-    mysqli_stmt_bind_param($stmt, "ssssiss", $title, $author, $domain, $description, $copies, $image, $pdf);
-
-    // Exécuter la requête
-    if (mysqli_stmt_execute($stmt)) {
-        return true; // Le livre a été ajouté avec succès
-    } else {
-        return false; // Une erreur s'est produite lors de l'ajout du livre
-    }
-}

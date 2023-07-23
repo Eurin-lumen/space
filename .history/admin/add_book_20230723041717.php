@@ -48,6 +48,7 @@ if (isset($_POST['submit'])) {
     }
 }
 
+$book = getBookById($book_id);
 ?>
 
 <!DOCTYPE html>

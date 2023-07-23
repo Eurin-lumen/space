@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,9 +47,6 @@
             <input type="password" id="password" name="password" required>
 
             <input type="submit" value="Se connecter">
-
-            <p>Vous n'avez pas un compte ? <a href="admin_register.php">Inscrivez-vous ici</a>.</p>
-
         </form>
     </div>
 </body>
