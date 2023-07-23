@@ -1,18 +1,3 @@
-<?php
-// Inclure le fichier de fonctions
-require_once '../includes/functions.php';
-
-// Vérifier si l'administrateur est connecté
-session_start();
-if (!isAdminLoggedIn()) {
-    header("Location: admin_login.php");
-    exit();
-}
-
-// Récupérer les livres empruntés par les utilisateurs
-$borrowed_books = getBorrowedBooks();
-
-?>
 
 
 <!DOCTYPE html>

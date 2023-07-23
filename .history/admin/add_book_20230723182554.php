@@ -95,23 +95,11 @@ if (isset($_POST['submit'])) {
                 <label for="copies">Exemplaires disponibles :</label>
                 <input type="number" name="copies" required>
 
-             <!-- Pour le bouton d'image -->
                 <label for="image">Image :</label>
-                <div class="file-upload">
-                    <input type="file" name="image" id="image">
-                    <button class="upload-button" type="button">Choisir une image</button>
-                    <span class="file-name">Aucun fichier sélectionné</span>
-                </div>
+                <input type="file" name="image">
 
-                <!-- Pour le bouton de PDF -->
                 <label for="pdf">Fichier PDF :</label>
-                <div class="file-upload">
-                    <input type="file" name="pdf" id="pdf">
-                    <button class="upload-button" type="button">Choisir un fichier PDF</button>
-                    <span class="file-name">Aucun fichier sélectionné</span>
-                </div>
-
-
+                <input type="file" name="pdf">
 
                 <input type="submit" name="submit" value="Ajouter">
             </form>
@@ -191,47 +179,6 @@ if (isset($_POST['submit'])) {
 
 .success-message {
     color: green;
-}
-
-/* Styles pour le bouton de téléchargement de fichier */
-.file-upload {
-    position: relative;
-}
-
-.file-upload input[type="file"] {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 12:
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-.upload-button {
-    background-color: #0088cc;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.upload-button:hover {
-    background-color: #006699;
-}
-
-.file-name {
-    margin-top: 5px;
-    font-size: 14px;
-    color: #555;
-}
-/* Styles pour le bouton de téléchargement de fichier */
-.file-upload {
-    position: relative;
-    margin-bottom: 20px; /* Ajout d'une marge entre les deux boutons */
 }
 
 </style>

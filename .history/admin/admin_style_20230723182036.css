@@ -1,0 +1,287 @@
+/* Styles spécifiques pour l'interface administrateur */
+
+/* Style de la navigation */
+.admin-nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+.admin-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.admin-nav li {
+    margin-right: 20px;
+}
+
+.admin-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.admin-nav a:hover {
+    color: #ffcc00;
+}
+
+/* Style du tableau de bord administrateur */
+.admin-dashboard {
+    padding: 20px;
+}
+
+.admin-dashboard h2 {
+    margin-bottom: 20px;
+}
+
+/* Style du formulaire d'ajout de livre */
+.add-book-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.add-book-form label,
+.add-book-form input,
+.add-book-form textarea,
+.add-book-form select {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.add-book-form input[type="submit"] {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.add-book-form input[type="submit"]:hover {
+    background-color: #ffc000;
+}
+
+/* Style de la liste des livres */
+.book-list {
+    margin-top: 20px;
+}
+
+.book-list th,
+.book-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.book-list th {
+    background-color: #f2f2f2;
+}
+
+.book-list td.actions {
+    white-space: nowrap;
+}
+
+/* Style du bouton pour consulter le PDF */
+.view-pdf-button {
+    background-color: #009688;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.view-pdf-button:hover {
+    background-color: #00796b;
+}
+
+/* Styles communs à l'interface utilisateur et administrateur */
+/* Vous pouvez les définir dans le fichier style.css */
+
+/* Style du header */
+header {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Style du formulaire de connexion et d'inscription */
+.login-form,
+.register-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.login-form h2,
+.register-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form label,
+.register-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-form input,
+.register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.login-form input[type="submit"],
+.register-form input[type="submit"] {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover,
+.register-form input[type="submit"]:hover {
+    background-color: #ffc000;
+}
+
+/* Style du footer */
+footer {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Autres styles */
+/* Styles communs */
+
+/* Reset des marges et des paddings */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Police de caractère par défaut */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styles des en-têtes de page */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+/* Styles de la navigation */
+nav {
+    background-color: #444;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Styles des formulaires */
+form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles spécifiques */
+
+/* Styles pour admin_dashboard.php */
+.admin-container {
+    margin: 20px;
+}
+
+.admin-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.admin-container th, .admin-container td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.admin-container th {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Styles pour add_book.php, edit_book.php, delete_book.php */
+.admin-container form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.admin-container form label {
+    font-size: 16px;
+}
+
+.admin-container form input[type="file"] {
+    margin-top: 10px;
+}
+
+.admin-container form a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.admin-container form a:hover {
+    text-decoration: underline;
+}

@@ -112,7 +112,6 @@ if (isset($_POST['submit'])) {
                 </div>
 
 
-
                 <input type="submit" name="submit" value="Ajouter">
             </form>
         </div>
@@ -227,11 +226,6 @@ if (isset($_POST['submit'])) {
     margin-top: 5px;
     font-size: 14px;
     color: #555;
-}
-/* Styles pour le bouton de téléchargement de fichier */
-.file-upload {
-    position: relative;
-    margin-bottom: 20px; /* Ajout d'une marge entre les deux boutons */
 }
 
 </style>
